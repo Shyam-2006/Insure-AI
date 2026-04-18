@@ -1,38 +1,319 @@
-.App {
-  text-align: center;
+/* RESET */
+
+*{
+margin:0;
+padding:0;
+box-sizing:border-box;
+font-family:'Segoe UI',sans-serif;
 }
 
-.App-logo {
-  height: 40vmin;
-  pointer-events: none;
+body{
+background:#f4f6fb;
 }
 
-@media (prefers-reduced-motion: no-preference) {
-  .App-logo {
-    animation: App-logo-spin infinite 20s linear;
-  }
+/* NAVBAR */
+
+.navbar{
+display:flex;
+justify-content:space-between;
+align-items:center;
+background:#1e3c72;
+padding:18px 40px;
+color:white;
 }
 
-.App-header {
-  background-color: #282c34;
-  min-height: 100vh;
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  justify-content: center;
-  font-size: calc(10px + 2vmin);
-  color: white;
+.logo{
+font-size:22px;
+font-weight:600;
 }
 
-.App-link {
-  color: #61dafb;
+.nav-links{
+display:flex;
+list-style:none;
+gap:25px;
 }
 
-@keyframes App-logo-spin {
-  from {
-    transform: rotate(0deg);
-  }
-  to {
-    transform: rotate(360deg);
-  }
+.nav-links a{
+color:white;
+text-decoration:none;
+font-weight:500;
+transition:0.3s;
+}
+
+.nav-links a:hover{
+color:#00e0ff;
+}
+
+/* HERO */
+
+.hero{
+height:60vh;
+display:flex;
+flex-direction:column;
+justify-content:center;
+align-items:center;
+background:linear-gradient(135deg,#1e3c72,#4a79d8);
+color:white;
+text-align:center;
+}
+
+.hero h1{
+font-size:40px;
+margin-bottom:10px;
+}
+
+.hero p{
+font-size:18px;
+margin-bottom:25px;
+}
+
+.hero-btn{
+background:#2ecc71;
+border:none;
+padding:12px 30px;
+color:white;
+font-size:16px;
+border-radius:6px;
+cursor:pointer;
+transition:0.3s;
+}
+
+.hero-btn:hover{
+background:#27ae60;
+}
+
+/* INSURANCE PLANS */
+
+.plans{
+padding:50px;
+text-align:center;
+}
+
+.plans h2{
+margin-bottom:40px;
+font-size:28px;
+}
+
+.plan-container{
+display:flex;
+justify-content:center;
+gap:30px;
+flex-wrap:wrap;
+}
+
+.plan-card{
+background:white;
+padding:30px;
+width:250px;
+border-radius:10px;
+box-shadow:0 5px 20px rgba(0,0,0,0.1);
+transition:0.3s;
+}
+
+.plan-card:hover{
+transform:translateY(-8px);
+}
+
+/* CALCULATOR */
+
+.calculator-container{
+display:flex;
+justify-content:center;
+align-items:center;
+padding:60px;
+}
+
+.calculator-box{
+background:white;
+padding:40px;
+width:420px;
+border-radius:12px;
+box-shadow:0 10px 30px rgba(0,0,0,0.1);
+text-align:center;
+}
+
+.calculator-box h1{
+margin-bottom:20px;
+}
+
+.calculator-box input,
+.calculator-box select{
+width:100%;
+padding:12px;
+margin:12px 0;
+border-radius:6px;
+border:1px solid #ccc;
+font-size:15px;
+}
+
+.calculator-box button{
+background:#1e3c72;
+color:white;
+border:none;
+padding:12px;
+margin-top:10px;
+border-radius:6px;
+width:100%;
+cursor:pointer;
+transition:0.3s;
+}
+
+.calculator-box button:hover{
+background:#274f9b;
+}
+
+.premium-result{
+margin-top:20px;
+font-size:20px;
+font-weight:600;
+}
+
+/* LOGIN / REGISTER / ADMIN */
+
+.auth-container{
+height:80vh;
+display:flex;
+justify-content:center;
+align-items:center;
+}
+
+.auth-box{
+width:380px;
+background:white;
+padding:40px;
+border-radius:10px;
+box-shadow:0 10px 30px rgba(0,0,0,0.1);
+text-align:center;
+}
+
+.auth-box h2{
+margin-bottom:25px;
+color:#1e3c72;
+}
+
+/* FORM */
+
+.auth-form{
+display:flex;
+flex-direction:column;
+}
+
+.auth-form input{
+padding:12px;
+margin-bottom:15px;
+border:1px solid #ccc;
+border-radius:6px;
+font-size:14px;
+transition:0.3s;
+}
+
+.auth-form input:focus{
+border-color:#1e3c72;
+outline:none;
+box-shadow:0 0 5px rgba(30,60,114,0.3);
+}
+
+/* BUTTON */
+
+.auth-btn{
+padding:12px;
+background:#1e3c72;
+color:white;
+border:none;
+border-radius:6px;
+font-size:15px;
+cursor:pointer;
+transition:0.3s;
+}
+
+.auth-btn:hover{
+background:#2f56a6;
+}
+
+/* TABLE */
+
+.activity-table{
+width:100%;
+border-collapse:collapse;
+margin-top:30px;
+}
+
+.activity-table th{
+background:#1e3c72;
+color:white;
+padding:12px;
+}
+
+.activity-table td{
+padding:10px;
+border-bottom:1px solid #eee;
+text-align:center;
+}
+
+.activity-table tr:hover{
+background:#f3f6ff;
+}
+/* PAGE CONTAINER */
+
+.page-container{
+padding:60px;
+display:flex;
+flex-direction:column;
+align-items:center;
+}
+
+/* POLICY PAGE */
+
+.policies-container{
+padding:60px;
+text-align:center;
+}
+
+/* BUY POLICY */
+
+.buy-policy-container{
+display:flex;
+justify-content:center;
+align-items:center;
+padding:60px;
+}
+
+/* FORM BOX */
+
+.form-box{
+background:white;
+padding:40px;
+width:450px;
+border-radius:12px;
+box-shadow:0 10px 30px rgba(0,0,0,0.1);
+text-align:center;
+}
+
+.form-box h2{
+margin-bottom:20px;
+color:#1e3c72;
+}
+
+.form-box input,
+.form-box select{
+width:100%;
+padding:12px;
+margin-bottom:15px;
+border:1px solid #ccc;
+border-radius:6px;
+}
+
+.form-box button{
+padding:12px;
+background:#1e3c72;
+color:white;
+border:none;
+border-radius:6px;
+width:100%;
+cursor:pointer;
+margin-top:10px;
+}
+
+.form-box button:hover{
+background:#2f56a6;
 }
